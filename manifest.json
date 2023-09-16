@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "test",
+  "description": "test",
+  "version": "1.0",
+  "icons": {
+    "16": "images/Enter_return_16.png",
+    "32": "images/Enter_return_32.png",
+    "48": "images/Enter_return_48.png",
+    "128": "images/Enter_return_128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://goole.com/*"]
+    }
+  ]
+}
