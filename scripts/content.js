@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("keydown", (event) => {
     // キーコードが13の場合はEnterキー
     if (event.key === "Enter") {
+      console.log("enter押された");
       event.preventDefault();
     }
   });
