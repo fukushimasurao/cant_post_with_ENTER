@@ -1,10 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
-  form.addEventListener("keydown", (event) => {
-    // キーコードが13の場合はEnterキー
-    if (event.key === "Enter") {
-      console.log("enter押された");
-      event.preventDefault();
-    }
-  });
+const form = document.querySelector("form");
+if (!form) return;
+
+form.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Enter" &&
+    !event.ctrlKey &&
+    event.target.tagName !== "TEXTAREA"
+  ) {
+    event.preventDefault();
+  }
 });
